@@ -14,7 +14,6 @@ public class Activator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        button.canPush = true;
         //проверяем нажатие кнопки. Нужно что бы фигцры не застревани при переходи из прозрачности.
         if (canPush)
         {

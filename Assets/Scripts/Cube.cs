@@ -36,7 +36,17 @@ public class Cube : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        if(this.CompareTag("Ñube") && other.CompareTag("Ñube"))
+        _ = other.tag;
+        if (other.CompareTag("Transparent"))
+        {
+            button = FindObjectOfType<Activator>();
+            button.canPush = false;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Transparent"))
         {
             button = FindObjectOfType<Activator>();
             button.canPush = true;

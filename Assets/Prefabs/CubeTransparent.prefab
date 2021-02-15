@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3447806541540245257}
   - component: {fileID: 3447806541540245262}
   - component: {fileID: 3447806541540245263}
-  - component: {fileID: 3447806541540245260}
+  - component: {fileID: -9191588839708274154}
   m_Layer: 0
-  m_Name: CubeTransparent (2)
-  m_TagString: "\u0421ube"
+  m_Name: CubeTransparent
+  m_TagString: Transparent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3447806541540245260
+--- !u!65 &-9191588839708274154
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
