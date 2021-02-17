@@ -8,7 +8,7 @@ public class Cube : MonoBehaviour
     [SerializeField] KeyCode keyOne;
     [SerializeField] KeyCode keyTwo;
     [SerializeField] Vector3 moveDirection;
-    Activator button;
+    GameObject button;
 
     private void FixedUpdate()
     {
@@ -36,11 +36,12 @@ public class Cube : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        _ = other.tag;
         if (other.CompareTag("Transparent"))
         {
-            button = FindObjectOfType<Activator>();
-            button.canPush = false;
+            foreach (GameObject button in GameObject.FindGameObjectsWithTag("Button"))
+            {
+                button.GetComponent<Activator>().off = false;
+            }
         }
     }
 
@@ -48,8 +49,10 @@ public class Cube : MonoBehaviour
     {
         if (other.CompareTag("Transparent"))
         {
-            button = FindObjectOfType<Activator>();
-            button.canPush = true;
+            foreach (GameObject button in GameObject.FindGameObjectsWithTag("Button"))
+            {
+                button.GetComponent<Activator>().off = true;
+            }
         }
     }
 }
